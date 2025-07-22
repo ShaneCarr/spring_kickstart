@@ -1,0 +1,14 @@
+type Query {
+    groupFeed(groupId: String!): GroupFeed
+}
+
+type GroupFeed {
+    threads: [Thread]
+    pinnedThreads: [Thread]
+}
+
+type Thread {
+    id: ID!
+    title: String!
+    pinned: Boolean!
+}

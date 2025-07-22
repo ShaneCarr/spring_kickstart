@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: org.example.GroupFeedIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.404 s <<< FAILURE! -- in org.example.GroupFeedIntegrationTest
+org.example.GroupFeedIntegrationTest.testPinnedThreads -- Time elapsed: 0.201 s <<< FAILURE!
+java.lang.AssertionError: 
+Response has 1 unexpected error(s) of 1 total. If expected, please filter them out: [{message=INTERNAL_ERROR for ce958ecc-1, locations=[{column=3, line=2}], path=[groupFeed], extensions={classification=INTERNAL_ERROR}}]
+Request: document='query {
+  groupFeed(groupId: "abc") {
+    threads { id title pinned }
+    pinnedThreads { id title pinned }
+  }
+}
+'
+	at org.springframework.graphql.test.tester.DefaultGraphQlTester$DefaultRequest.lambda$assertDecorator$3(DefaultGraphQlTester.java:213)
+	at org.springframework.graphql.test.tester.DefaultGraphQlTester$ResponseDelegate.verifyErrors(DefaultGraphQlTester.java:296)
+	at org.springframework.graphql.test.tester.DefaultGraphQlTester$DefaultResponse.path(DefaultGraphQlTester.java:326)
+	at org.example.GroupFeedIntegrationTest.testPinnedThreads(GroupFeedIntegrationTest.java:40)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.AssertionError: Response has 1 unexpected error(s) of 1 total. If expected, please filter them out: [{message=INTERNAL_ERROR for ce958ecc-1, locations=[{column=3, line=2}], path=[groupFeed], extensions={classification=INTERNAL_ERROR}}]
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:39)
+	at org.springframework.test.util.AssertionErrors.assertTrue(AssertionErrors.java:73)
+	at org.springframework.graphql.test.tester.DefaultGraphQlTester$ResponseDelegate.lambda$verifyErrors$2(DefaultGraphQlTester.java:297)
+	at org.springframework.graphql.test.tester.DefaultGraphQlTester$DefaultRequest.lambda$assertDecorator$3(DefaultGraphQlTester.java:210)
+	... 6 more
+

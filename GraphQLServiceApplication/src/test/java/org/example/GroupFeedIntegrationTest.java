@@ -3,18 +3,27 @@ package org.example;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.graphql.test.tester.HttpGraphQlTester;
 import org.springframework.graphql.test.tester.GraphQlTester;
+import org.springframework.test.web.reactive.server.WebTestClient;
 import org.springframework.test.context.TestPropertySource;
 
-@SpringBootTest
-@TestPropertySource(properties = "spring.main.web-application-type=none")
-class GroupFeedIntegrationTest {
-
-  @Autowired
-  GraphQlTester graphQlTester;
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@TestPropertySource(properties = "spring.main.web-application-type=reactive")
+public class GroupFeedIntegrationTest {
+  @LocalServerPort
+  int port;
 
   @Test
   void testPinnedThreads() {
+    WebTestClient client = WebTestClient
+            .bindToServer()
+            .baseUrl("http://localhost:" + port + "/graphql")
+            .build();
+
+    GraphQlTester graphQlTester = HttpGraphQlTester.create(client);
+
     String query = """
             query {
               groupFeed(groupId: "abc") {

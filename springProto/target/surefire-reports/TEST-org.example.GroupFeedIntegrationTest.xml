@@ -1,0 +1,1398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="org.example.GroupFeedIntegrationTest" time="0.404" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/shane/repo/spring_kickstart/springProto/target/test-classes:/home/shane/repo/spring_kickstart/springProto/target/classes:/home/shane/.m2/repository/org/springframework/boot/spring-boot-starter-graphql/3.5.3/spring-boot-starter-graphql-3.5.3.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-starter/3.5.3/spring-boot-starter-3.5.3.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot/3.5.3/spring-boot-3.5.3.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.3/spring-boot-autoconfigure-3.5.3.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.5.3/spring-boot-starter-logging-3.5.3.jar:/home/shane/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/home/shane/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/home/shane/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/home/shane/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/home/shane/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/home/shane/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/shane/.m2/repository/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.5.3/spring-boot-starter-json-3.5.3.jar:/home/shane/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.1/jackson-databind-2.19.1.jar:/home/shane/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.1/jackson-annotations-2.19.1.jar:/home/shane/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.1/jackson-core-2.19.1.jar:/home/shane/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.19.1/jackson-datatype-jdk8-2.19.1.jar:/home/shane/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.1/jackson-datatype-jsr310-2.19.1.jar:/home/shane/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.19.1/jackson-module-parameter-names-2.19.1.jar:/home/shane/.m2/repository/org/springframework/graphql/spring-graphql/1.4.0/spring-graphql-1.4.0.jar:/home/shane/.m2/repository/io/micrometer/context-propagation/1.1.3/context-propagation-1.1.3.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.5.3/spring-boot-starter-test-3.5.3.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-test/3.5.3/spring-boot-test-3.5.3.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.5.3/spring-boot-test-autoconfigure-3.5.3.jar:/home/shane/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/shane/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/home/shane/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/home/shane/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/home/shane/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar:/home/shane/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar:/home/shane/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/home/shane/.m2/repository/org/assertj/assertj-core/3.27.3/assertj-core-3.27.3.jar:/home/shane/.m2/repository/net/bytebuddy/byte-buddy/1.17.6/byte-buddy-1.17.6.jar:/home/shane/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/home/shane/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/shane/.m2/repository/org/junit/jupiter/junit-jupiter/5.12.2/junit-jupiter-5.12.2.jar:/home/shane/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.2/junit-jupiter-api-5.12.2.jar:/home/shane/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/shane/.m2/repository/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar:/home/shane/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/shane/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.12.2/junit-jupiter-params-5.12.2.jar:/home/shane/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.2/junit-jupiter-engine-5.12.2.jar:/home/shane/.m2/repository/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar:/home/shane/.m2/repository/org/mockito/mockito-core/5.17.0/mockito-core-5.17.0.jar:/home/shane/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.6/byte-buddy-agent-1.17.6.jar:/home/shane/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/shane/.m2/repository/org/mockito/mockito-junit-jupiter/5.17.0/mockito-junit-jupiter-5.17.0.jar:/home/shane/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/shane/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/shane/.m2/repository/org/springframework/spring-core/6.2.8/spring-core-6.2.8.jar:/home/shane/.m2/repository/org/springframework/spring-jcl/6.2.8/spring-jcl-6.2.8.jar:/home/shane/.m2/repository/org/springframework/spring-test/6.2.8/spring-test-6.2.8.jar:/home/shane/.m2/repository/org/xmlunit/xmlunit-core/2.10.2/xmlunit-core-2.10.2.jar:/home/shane/.m2/repository/org/springframework/graphql/spring-graphql-test/1.4.0/spring-graphql-test-1.4.0.jar:/home/shane/.m2/repository/com/graphql-java/graphql-java/24.0/graphql-java-24.0.jar:/home/shane/.m2/repository/com/graphql-java/java-dataloader/5.0.0/java-dataloader-5.0.0.jar:/home/shane/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/home/shane/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/shane/.m2/repository/io/projectreactor/reactor-core/3.7.7/reactor-core-3.7.7.jar:/home/shane/.m2/repository/org/springframework/spring-context/6.2.8/spring-context-6.2.8.jar:/home/shane/.m2/repository/org/springframework/spring-aop/6.2.8/spring-aop-6.2.8.jar:/home/shane/.m2/repository/org/springframework/spring-beans/6.2.8/spring-beans-6.2.8.jar:/home/shane/.m2/repository/org/springframework/spring-expression/6.2.8/spring-expression-6.2.8.jar:/home/shane/.m2/repository/io/micrometer/micrometer-observation/1.15.1/micrometer-observation-1.15.1.jar:/home/shane/.m2/repository/io/micrometer/micrometer-commons/1.15.1/micrometer-commons-1.15.1.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-starter-webflux/3.5.3/spring-boot-starter-webflux-3.5.3.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-starter-reactor-netty/3.5.3/spring-boot-starter-reactor-netty-3.5.3.jar:/home/shane/.m2/repository/io/projectreactor/netty/reactor-netty-http/1.2.7/reactor-netty-http-1.2.7.jar:/home/shane/.m2/repository/io/netty/netty-codec-http/4.1.122.Final/netty-codec-http-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-common/4.1.122.Final/netty-common-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-buffer/4.1.122.Final/netty-buffer-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-transport/4.1.122.Final/netty-transport-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-codec/4.1.122.Final/netty-codec-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-handler/4.1.122.Final/netty-handler-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-codec-http2/4.1.122.Final/netty-codec-http2-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-resolver-dns/4.1.122.Final/netty-resolver-dns-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-resolver/4.1.122.Final/netty-resolver-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-codec-dns/4.1.122.Final/netty-codec-dns-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-resolver-dns-native-macos/4.1.122.Final/netty-resolver-dns-native-macos-4.1.122.Final-osx-x86_64.jar:/home/shane/.m2/repository/io/netty/netty-resolver-dns-classes-macos/4.1.122.Final/netty-resolver-dns-classes-macos-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-transport-native-epoll/4.1.122.Final/netty-transport-native-epoll-4.1.122.Final-linux-x86_64.jar:/home/shane/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.122.Final/netty-transport-native-unix-common-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.122.Final/netty-transport-classes-epoll-4.1.122.Final.jar:/home/shane/.m2/repository/io/projectreactor/netty/reactor-netty-core/1.2.7/reactor-netty-core-1.2.7.jar:/home/shane/.m2/repository/io/netty/netty-handler-proxy/4.1.122.Final/netty-handler-proxy-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-codec-socks/4.1.122.Final/netty-codec-socks-4.1.122.Final.jar:/home/shane/.m2/repository/org/springframework/spring-web/6.2.8/spring-web-6.2.8.jar:/home/shane/.m2/repository/org/springframework/spring-webflux/6.2.8/spring-webflux-6.2.8.jar:"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value="America/Los_Angeles"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="APPLICATION_NAME" value="graphql"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/home/shane/.sdkman/candidates/java/21.0.8-amzn/lib"/>
+    <property name="sun.java.command" value="/home/shane/repo/spring_kickstart/springProto/target/surefire/surefirebooter-20250721223240634_3.jar /home/shane/repo/spring_kickstart/springProto/target/surefire 2025-07-21T22-32-40_607-jvmRun1 surefire-20250721223240634_1tmp surefire_0-20250721223240634_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/shane/repo/spring_kickstart/springProto/target/test-classes:/home/shane/repo/spring_kickstart/springProto/target/classes:/home/shane/.m2/repository/org/springframework/boot/spring-boot-starter-graphql/3.5.3/spring-boot-starter-graphql-3.5.3.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-starter/3.5.3/spring-boot-starter-3.5.3.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot/3.5.3/spring-boot-3.5.3.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.3/spring-boot-autoconfigure-3.5.3.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.5.3/spring-boot-starter-logging-3.5.3.jar:/home/shane/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/home/shane/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/home/shane/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/home/shane/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/home/shane/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/home/shane/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/shane/.m2/repository/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.5.3/spring-boot-starter-json-3.5.3.jar:/home/shane/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.1/jackson-databind-2.19.1.jar:/home/shane/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.1/jackson-annotations-2.19.1.jar:/home/shane/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.1/jackson-core-2.19.1.jar:/home/shane/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.19.1/jackson-datatype-jdk8-2.19.1.jar:/home/shane/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.1/jackson-datatype-jsr310-2.19.1.jar:/home/shane/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.19.1/jackson-module-parameter-names-2.19.1.jar:/home/shane/.m2/repository/org/springframework/graphql/spring-graphql/1.4.0/spring-graphql-1.4.0.jar:/home/shane/.m2/repository/io/micrometer/context-propagation/1.1.3/context-propagation-1.1.3.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.5.3/spring-boot-starter-test-3.5.3.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-test/3.5.3/spring-boot-test-3.5.3.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.5.3/spring-boot-test-autoconfigure-3.5.3.jar:/home/shane/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/shane/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/home/shane/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/home/shane/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/home/shane/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar:/home/shane/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar:/home/shane/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/home/shane/.m2/repository/org/assertj/assertj-core/3.27.3/assertj-core-3.27.3.jar:/home/shane/.m2/repository/net/bytebuddy/byte-buddy/1.17.6/byte-buddy-1.17.6.jar:/home/shane/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/home/shane/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/shane/.m2/repository/org/junit/jupiter/junit-jupiter/5.12.2/junit-jupiter-5.12.2.jar:/home/shane/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.2/junit-jupiter-api-5.12.2.jar:/home/shane/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/shane/.m2/repository/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar:/home/shane/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/shane/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.12.2/junit-jupiter-params-5.12.2.jar:/home/shane/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.2/junit-jupiter-engine-5.12.2.jar:/home/shane/.m2/repository/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar:/home/shane/.m2/repository/org/mockito/mockito-core/5.17.0/mockito-core-5.17.0.jar:/home/shane/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.6/byte-buddy-agent-1.17.6.jar:/home/shane/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/shane/.m2/repository/org/mockito/mockito-junit-jupiter/5.17.0/mockito-junit-jupiter-5.17.0.jar:/home/shane/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/shane/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/shane/.m2/repository/org/springframework/spring-core/6.2.8/spring-core-6.2.8.jar:/home/shane/.m2/repository/org/springframework/spring-jcl/6.2.8/spring-jcl-6.2.8.jar:/home/shane/.m2/repository/org/springframework/spring-test/6.2.8/spring-test-6.2.8.jar:/home/shane/.m2/repository/org/xmlunit/xmlunit-core/2.10.2/xmlunit-core-2.10.2.jar:/home/shane/.m2/repository/org/springframework/graphql/spring-graphql-test/1.4.0/spring-graphql-test-1.4.0.jar:/home/shane/.m2/repository/com/graphql-java/graphql-java/24.0/graphql-java-24.0.jar:/home/shane/.m2/repository/com/graphql-java/java-dataloader/5.0.0/java-dataloader-5.0.0.jar:/home/shane/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/home/shane/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/shane/.m2/repository/io/projectreactor/reactor-core/3.7.7/reactor-core-3.7.7.jar:/home/shane/.m2/repository/org/springframework/spring-context/6.2.8/spring-context-6.2.8.jar:/home/shane/.m2/repository/org/springframework/spring-aop/6.2.8/spring-aop-6.2.8.jar:/home/shane/.m2/repository/org/springframework/spring-beans/6.2.8/spring-beans-6.2.8.jar:/home/shane/.m2/repository/org/springframework/spring-expression/6.2.8/spring-expression-6.2.8.jar:/home/shane/.m2/repository/io/micrometer/micrometer-observation/1.15.1/micrometer-observation-1.15.1.jar:/home/shane/.m2/repository/io/micrometer/micrometer-commons/1.15.1/micrometer-commons-1.15.1.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-starter-webflux/3.5.3/spring-boot-starter-webflux-3.5.3.jar:/home/shane/.m2/repository/org/springframework/boot/spring-boot-starter-reactor-netty/3.5.3/spring-boot-starter-reactor-netty-3.5.3.jar:/home/shane/.m2/repository/io/projectreactor/netty/reactor-netty-http/1.2.7/reactor-netty-http-1.2.7.jar:/home/shane/.m2/repository/io/netty/netty-codec-http/4.1.122.Final/netty-codec-http-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-common/4.1.122.Final/netty-common-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-buffer/4.1.122.Final/netty-buffer-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-transport/4.1.122.Final/netty-transport-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-codec/4.1.122.Final/netty-codec-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-handler/4.1.122.Final/netty-handler-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-codec-http2/4.1.122.Final/netty-codec-http2-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-resolver-dns/4.1.122.Final/netty-resolver-dns-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-resolver/4.1.122.Final/netty-resolver-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-codec-dns/4.1.122.Final/netty-codec-dns-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-resolver-dns-native-macos/4.1.122.Final/netty-resolver-dns-native-macos-4.1.122.Final-osx-x86_64.jar:/home/shane/.m2/repository/io/netty/netty-resolver-dns-classes-macos/4.1.122.Final/netty-resolver-dns-classes-macos-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-transport-native-epoll/4.1.122.Final/netty-transport-native-epoll-4.1.122.Final-linux-x86_64.jar:/home/shane/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.122.Final/netty-transport-native-unix-common-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.122.Final/netty-transport-classes-epoll-4.1.122.Final.jar:/home/shane/.m2/repository/io/projectreactor/netty/reactor-netty-core/1.2.7/reactor-netty-core-1.2.7.jar:/home/shane/.m2/repository/io/netty/netty-handler-proxy/4.1.122.Final/netty-handler-proxy-4.1.122.Final.jar:/home/shane/.m2/repository/io/netty/netty-codec-socks/4.1.122.Final/netty-codec-socks-4.1.122.Final.jar:/home/shane/.m2/repository/org/springframework/spring-web/6.2.8/spring-web-6.2.8.jar:/home/shane/.m2/repository/org/springframework/spring-webflux/6.2.8/spring-webflux-6.2.8.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/shane"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-07-15"/>
+    <property name="java.home" value="/home/shane/.sdkman/candidates/java/21.0.8-amzn"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/shane/repo/spring_kickstart/springProto"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="/home/shane/repo/spring_kickstart/springProto/target/surefire/surefirebooter-20250721223240634_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.8+9-LTS"/>
+    <property name="user.name" value="shane"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.14.0-24-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Corretto-21.0.8.9.1"/>
+    <property name="localRepository" value="/home/shane/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-21/issues/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="21.0.8"/>
+    <property name="user.dir" value="/home/shane/repo/spring_kickstart/springProto"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="68940"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="21.0.8+9-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[graphql] "/>
+  </properties>
+  <testcase name="testPinnedThreads" classname="org.example.GroupFeedIntegrationTest" time="0.201">
+    <failure message="Response has 1 unexpected error(s) of 1 total. If expected, please filter them out: [{message=INTERNAL_ERROR for ce958ecc-1, locations=[{column=3, line=2}], path=[groupFeed], extensions={classification=INTERNAL_ERROR}}]&#10;Request: document=&apos;query {&#10;  groupFeed(groupId: &quot;abc&quot;) {&#10;    threads { id title pinned }&#10;    pinnedThreads { id title pinned }&#10;  }&#10;}&#10;&apos;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+Response has 1 unexpected error(s) of 1 total. If expected, please filter them out: [{message=INTERNAL_ERROR for ce958ecc-1, locations=[{column=3, line=2}], path=[groupFeed], extensions={classification=INTERNAL_ERROR}}]
+Request: document='query {
+  groupFeed(groupId: "abc") {
+    threads { id title pinned }
+    pinnedThreads { id title pinned }
+  }
+}
+'
+	at org.springframework.graphql.test.tester.DefaultGraphQlTester$DefaultRequest.lambda$assertDecorator$3(DefaultGraphQlTester.java:213)
+	at org.springframework.graphql.test.tester.DefaultGraphQlTester$ResponseDelegate.verifyErrors(DefaultGraphQlTester.java:296)
+	at org.springframework.graphql.test.tester.DefaultGraphQlTester$DefaultResponse.path(DefaultGraphQlTester.java:326)
+	at org.example.GroupFeedIntegrationTest.testPinnedThreads(GroupFeedIntegrationTest.java:40)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.AssertionError: Response has 1 unexpected error(s) of 1 total. If expected, please filter them out: [{message=INTERNAL_ERROR for ce958ecc-1, locations=[{column=3, line=2}], path=[groupFeed], extensions={classification=INTERNAL_ERROR}}]
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:39)
+	at org.springframework.test.util.AssertionErrors.assertTrue(AssertionErrors.java:73)
+	at org.springframework.graphql.test.tester.DefaultGraphQlTester$ResponseDelegate.lambda$verifyErrors$2(DefaultGraphQlTester.java:297)
+	at org.springframework.graphql.test.tester.DefaultGraphQlTester$DefaultRequest.lambda$assertDecorator$3(DefaultGraphQlTester.java:210)
+	... 6 more
+]]></failure>
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.3)
+
+2025-07-21T22:32:41.951-07:00  INFO 68940 --- [graphql] [           main] org.example.GroupFeedIntegrationTest     : Starting GroupFeedIntegrationTest using Java 21.0.8 with PID 68940 (started by shane in /home/shane/repo/spring_kickstart/springProto)
+2025-07-21T22:32:41.951-07:00 DEBUG 68940 --- [graphql] [           main] org.example.GroupFeedIntegrationTest     : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-21T22:32:41.951-07:00  INFO 68940 --- [graphql] [           main] org.example.GroupFeedIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+2025-07-21T22:32:41.952-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2025-07-21T22:32:41.952-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2025-07-21T22:32:41.954-07:00 DEBUG 68940 --- [graphql] [           main] o.s.c.a.ClassPathBeanDefinitionScanner   : Identified candidate component class: file [/home/shane/repo/spring_kickstart/springProto/target/classes/com/graph/graphqlexample/graphql/GroupFeedResolver.class]
+2025-07-21T22:32:41.955-07:00 DEBUG 68940 --- [graphql] [           main] o.s.c.a.ClassPathBeanDefinitionScanner   : Identified candidate component class: file [/home/shane/repo/spring_kickstart/springProto/target/classes/com/graph/graphqlexample/graphql/dataloader/DataLoaderConfig.class]
+2025-07-21T22:32:41.955-07:00 DEBUG 68940 --- [graphql] [           main] o.s.c.a.ClassPathBeanDefinitionScanner   : Identified candidate component class: file [/home/shane/repo/spring_kickstart/springProto/target/classes/com/graph/graphqlexample/graphql/dataloader/HydrantGroupFeedDataLoader.class]
+2025-07-21T22:32:41.955-07:00 DEBUG 68940 --- [graphql] [           main] o.s.c.a.ClassPathBeanDefinitionScanner   : Identified candidate component class: file [/home/shane/repo/spring_kickstart/springProto/target/classes/com/graph/graphqlexample/graphql/service/MockHydrantClient.class]
+2025-07-21T22:32:41.993-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.graphql.tester.HttpGraphQlTesterContextCustomizer$HttpGraphQlTesterRegistrar'
+2025-07-21T22:32:41.993-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer$TestRestTemplateRegistrar'
+2025-07-21T22:32:41.993-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer$WebTestClientRegistrar'
+2025-07-21T22:32:41.995-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'propertySourcesPlaceholderConfigurer'
+2025-07-21T22:32:41.995-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor'
+2025-07-21T22:32:41.996-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor'
+2025-07-21T22:32:41.996-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2025-07-21T22:32:41.996-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'forceAutoProxyCreatorToUseClassProxying'
+2025-07-21T22:32:41.996-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'bootstrapExecutorAliasPostProcessor'
+2025-07-21T22:32:41.997-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2025-07-21T22:32:41.997-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2025-07-21T22:32:41.997-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2025-07-21T22:32:41.997-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor$SpyPostProcessor'
+2025-07-21T22:32:41.997-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor'
+2025-07-21T22:32:41.997-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.internalConfigurationPropertiesBinder'
+2025-07-21T22:32:41.997-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2025-07-21T22:32:41.998-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webServerFactoryCustomizerBeanPostProcessor'
+2025-07-21T22:32:41.999-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'nettyReactiveWebServerFactory'
+2025-07-21T22:32:41.999-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.ReactiveWebServerFactoryConfiguration$EmbeddedNetty'
+2025-07-21T22:32:41.999-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'reactorResourceFactory'
+2025-07-21T22:32:41.999-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.reactor.netty.ReactorNettyConfigurations$ReactorResourceFactoryConfiguration'
+2025-07-21T22:32:41.999-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.reactor.netty-org.springframework.boot.autoconfigure.reactor.netty.ReactorNettyProperties'
+2025-07-21T22:32:41.999-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
+2025-07-21T22:32:42.000-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'reactorResourceFactory' via factory method to bean named 'spring.reactor.netty-org.springframework.boot.autoconfigure.reactor.netty.ReactorNettyProperties'
+2025-07-21T22:32:42.000-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'nettyReactiveWebServerFactory' via factory method to bean named 'reactorResourceFactory'
+2025-07-21T22:32:42.001-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'reactiveWebServerFactoryCustomizer'
+2025-07-21T22:32:42.001-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.ReactiveWebServerFactoryAutoConfiguration'
+2025-07-21T22:32:42.001-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2025-07-21T22:32:42.001-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'reactiveWebServerFactoryCustomizer' via factory method to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2025-07-21T22:32:42.002-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'sslBundleRegistry'
+2025-07-21T22:32:42.002-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration'
+2025-07-21T22:32:42.002-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.ssl-org.springframework.boot.autoconfigure.ssl.SslProperties'
+2025-07-21T22:32:42.002-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration' via constructor to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@61d09475'
+2025-07-21T22:32:42.002-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration' via constructor to bean named 'spring.ssl-org.springframework.boot.autoconfigure.ssl.SslProperties'
+2025-07-21T22:32:42.002-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'sslPropertiesSslBundleRegistrar'
+2025-07-21T22:32:42.002-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'fileWatcher'
+2025-07-21T22:32:42.002-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'sslPropertiesSslBundleRegistrar' via factory method to bean named 'fileWatcher'
+2025-07-21T22:32:42.002-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'nettyWebServerFactoryCustomizer'
+2025-07-21T22:32:42.003-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration$NettyWebServerFactoryCustomizerConfiguration'
+2025-07-21T22:32:42.003-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'nettyWebServerFactoryCustomizer' via factory method to bean named 'environment'
+2025-07-21T22:32:42.003-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'nettyWebServerFactoryCustomizer' via factory method to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2025-07-21T22:32:42.027-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'applicationTaskExecutor'
+2025-07-21T22:32:42.027-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorConfiguration'
+2025-07-21T22:32:42.027-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'threadPoolTaskExecutorBuilder'
+2025-07-21T22:32:42.027-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$ThreadPoolTaskExecutorBuilderConfiguration'
+2025-07-21T22:32:42.028-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2025-07-21T22:32:42.028-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'threadPoolTaskExecutorBuilder' via factory method to bean named 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2025-07-21T22:32:42.028-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'applicationTaskExecutor' via factory method to bean named 'threadPoolTaskExecutorBuilder'
+2025-07-21T22:32:42.029-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.test.context.support.internalDynamicPropertyRegistrarBeanInitializer'
+2025-07-21T22:32:42.029-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'graphqlApplication'
+2025-07-21T22:32:42.029-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'groupFeedResolver'
+2025-07-21T22:32:42.029-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'dataLoaderConfig'
+>> DEBUG: DataLoaderConfig constructor called!
+2025-07-21T22:32:42.029-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'hydrantGroupFeedDataLoader'
+2025-07-21T22:32:42.029-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mockHydrantClient'
+2025-07-21T22:32:42.029-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'hydrantGroupFeedDataLoader' via constructor to bean named 'mockHydrantClient'
+2025-07-21T22:32:42.029-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'groupFeedLoaderRegistrar'
+2025-07-21T22:32:42.029-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'groupFeedLoaderRegistrar' via factory method to bean named 'hydrantGroupFeedDataLoader'
+>> DEBUG: REGISTERING groupFeedLoader - DataLoaderConfig @Bean method called!
+2025-07-21T22:32:42.030-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.AutoConfigurationPackages'
+2025-07-21T22:32:42.030-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration'
+2025-07-21T22:32:42.030-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter'
+2025-07-21T22:32:42.030-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration'
+2025-07-21T22:32:42.030-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'standardJacksonObjectMapperBuilderCustomizer'
+2025-07-21T22:32:42.030-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties'
+2025-07-21T22:32:42.031-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'standardJacksonObjectMapperBuilderCustomizer' via factory method to bean named 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties'
+2025-07-21T22:32:42.031-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'parameterNamesModule'
+2025-07-21T22:32:42.031-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration'
+2025-07-21T22:32:42.031-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jsonMixinModule'
+2025-07-21T22:32:42.031-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonMixinConfiguration'
+2025-07-21T22:32:42.031-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jsonMixinModuleEntries'
+2025-07-21T22:32:42.031-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jsonMixinModuleEntries' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@61d09475'
+2025-07-21T22:32:42.031-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.graph.graphqlexample.graphql'. Automatic @Repository and @Entity scanning is enabled.
+2025-07-21T22:32:42.032-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jsonMixinModule' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@61d09475'
+2025-07-21T22:32:42.032-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jsonMixinModule' via factory method to bean named 'jsonMixinModuleEntries'
+2025-07-21T22:32:42.032-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jsonComponentModule'
+2025-07-21T22:32:42.032-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration'
+2025-07-21T22:32:42.033-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration'
+2025-07-21T22:32:42.033-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration'
+2025-07-21T22:32:42.033-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jacksonObjectMapper'
+2025-07-21T22:32:42.033-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jacksonObjectMapperBuilder' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@61d09475'
+2025-07-21T22:32:42.033-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jacksonObjectMapperBuilder' via factory method to bean named 'standardJacksonObjectMapperBuilderCustomizer'
+2025-07-21T22:32:42.033-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jacksonObjectMapper' via factory method to bean named 'jacksonObjectMapperBuilder'
+2025-07-21T22:32:42.034-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration$DefaultCodecsConfiguration'
+2025-07-21T22:32:42.034-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'defaultCodecCustomizer'
+2025-07-21T22:32:42.034-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.codec-org.springframework.boot.autoconfigure.codec.CodecProperties'
+2025-07-21T22:32:42.034-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.http.codecs-org.springframework.boot.autoconfigure.http.codec.HttpCodecsProperties'
+2025-07-21T22:32:42.034-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'defaultCodecCustomizer' via factory method to bean named 'spring.codec-org.springframework.boot.autoconfigure.codec.CodecProperties'
+2025-07-21T22:32:42.034-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'defaultCodecCustomizer' via factory method to bean named 'spring.http.codecs-org.springframework.boot.autoconfigure.http.codec.HttpCodecsProperties'
+2025-07-21T22:32:42.034-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'defaultCodecCustomizer' via factory method to bean named 'environment'
+2025-07-21T22:32:42.034-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration$JacksonCodecConfiguration'
+2025-07-21T22:32:42.035-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jacksonCodecCustomizer'
+2025-07-21T22:32:42.035-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jacksonCodecCustomizer' via factory method to bean named 'jacksonObjectMapper'
+2025-07-21T22:32:42.035-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration'
+2025-07-21T22:32:42.035-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.ReactiveMultipartAutoConfiguration'
+2025-07-21T22:32:42.035-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'defaultPartHttpMessageReaderCustomizer'
+2025-07-21T22:32:42.035-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.webflux.multipart-org.springframework.boot.autoconfigure.web.reactive.ReactiveMultipartProperties'
+2025-07-21T22:32:42.036-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'defaultPartHttpMessageReaderCustomizer' via factory method to bean named 'spring.webflux.multipart-org.springframework.boot.autoconfigure.web.reactive.ReactiveMultipartProperties'
+2025-07-21T22:32:42.036-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.WebSessionIdResolverAutoConfiguration'
+2025-07-21T22:32:42.036-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.webflux-org.springframework.boot.autoconfigure.web.reactive.WebFluxProperties'
+2025-07-21T22:32:42.036-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.WebSessionIdResolverAutoConfiguration' via constructor to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2025-07-21T22:32:42.036-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.WebSessionIdResolverAutoConfiguration' via constructor to bean named 'spring.webflux-org.springframework.boot.autoconfigure.web.reactive.WebFluxProperties'
+2025-07-21T22:32:42.036-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webSessionIdResolver'
+2025-07-21T22:32:42.036-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.error.ErrorWebFluxAutoConfiguration'
+2025-07-21T22:32:42.037-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.error.ErrorWebFluxAutoConfiguration' via constructor to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2025-07-21T22:32:42.037-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'errorWebExceptionHandler'
+2025-07-21T22:32:42.037-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'errorAttributes'
+2025-07-21T22:32:42.037-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2025-07-21T22:32:42.037-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'serverCodecConfigurer'
+2025-07-21T22:32:42.037-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration'
+2025-07-21T22:32:42.038-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration' via constructor to bean named 'spring.webflux-org.springframework.boot.autoconfigure.web.reactive.WebFluxProperties'
+2025-07-21T22:32:42.038-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration' via constructor to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2025-07-21T22:32:42.038-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration' via constructor to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2025-07-21T22:32:42.038-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$WebFluxConfig'
+2025-07-21T22:32:42.038-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$WebFluxConfig' via constructor to bean named 'environment'
+2025-07-21T22:32:42.038-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$WebFluxConfig' via constructor to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2025-07-21T22:32:42.038-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$WebFluxConfig' via constructor to bean named 'spring.webflux-org.springframework.boot.autoconfigure.web.reactive.WebFluxProperties'
+2025-07-21T22:32:42.038-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$WebFluxConfig' via constructor to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@6dbb3d7d'
+2025-07-21T22:32:42.038-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.graphql.reactive.GraphQlWebFluxAutoConfiguration$GraphQlEndpointCorsConfiguration'
+2025-07-21T22:32:42.039-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.graphql-org.springframework.boot.autoconfigure.graphql.GraphQlProperties'
+2025-07-21T22:32:42.040-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.graphql.cors-org.springframework.boot.autoconfigure.graphql.GraphQlCorsProperties'
+2025-07-21T22:32:42.040-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.graphql.reactive.GraphQlWebFluxAutoConfiguration$GraphQlEndpointCorsConfiguration' via constructor to bean named 'spring.graphql-org.springframework.boot.autoconfigure.graphql.GraphQlProperties'
+2025-07-21T22:32:42.040-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.graphql.reactive.GraphQlWebFluxAutoConfiguration$GraphQlEndpointCorsConfiguration' via constructor to bean named 'spring.graphql.cors-org.springframework.boot.autoconfigure.graphql.GraphQlCorsProperties'
+2025-07-21T22:32:42.041-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'errorWebExceptionHandler' via factory method to bean named 'errorAttributes'
+2025-07-21T22:32:42.041-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'errorWebExceptionHandler' via factory method to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2025-07-21T22:32:42.041-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'errorWebExceptionHandler' via factory method to bean named 'serverCodecConfigurer'
+2025-07-21T22:32:42.041-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'errorWebExceptionHandler' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@61d09475'
+2025-07-21T22:32:42.041-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webFluxConversionService'
+2025-07-21T22:32:42.042-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webFluxValidator'
+2025-07-21T22:32:42.042-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'localeContextResolver'
+2025-07-21T22:32:42.042-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webSessionManager'
+2025-07-21T22:32:42.042-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webHandler'
+2025-07-21T22:32:42.042-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'requestMappingHandlerMapping'
+2025-07-21T22:32:42.043-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webFluxContentTypeResolver'
+2025-07-21T22:32:42.043-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'webFluxContentTypeResolver'
+2025-07-21T22:32:42.043-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'routerFunctionMapping'
+2025-07-21T22:32:42.043-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'routerFunctionMapping' via factory method to bean named 'serverCodecConfigurer'
+2025-07-21T22:32:42.044-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'graphQlRouterFunction'
+2025-07-21T22:32:42.044-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.graphql.reactive.GraphQlWebFluxAutoConfiguration'
+2025-07-21T22:32:42.044-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'graphQlHttpHandler'
+2025-07-21T22:32:42.044-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webGraphQlHandler'
+2025-07-21T22:32:42.044-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'executionGraphQlService'
+2025-07-21T22:32:42.044-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.graphql.GraphQlAutoConfiguration'
+2025-07-21T22:32:42.044-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.graphql.GraphQlAutoConfiguration' via constructor to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@6dbb3d7d'
+2025-07-21T22:32:42.044-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'graphQlSource'
+2025-07-21T22:32:42.044-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'graphQlSource' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@61d09475'
+2025-07-21T22:32:42.044-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'graphQlSource' via factory method to bean named 'spring.graphql-org.springframework.boot.autoconfigure.graphql.GraphQlProperties'
+2025-07-21T22:32:42.045-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'annotatedControllerConfigurerDataFetcherExceptionResolver'
+2025-07-21T22:32:42.045-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'annotatedControllerConfigurer'
+2025-07-21T22:32:42.045-07:00 DEBUG 68940 --- [graphql] [           main] a.s.AnnotatedControllerExceptionResolver : @GraphQlException methods in ControllerAdvice beans: none
+2025-07-21T22:32:42.046-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'annotatedControllerConfigurerDataFetcherExceptionResolver' via factory method to bean named 'annotatedControllerConfigurer'
+2025-07-21T22:32:42.047-07:00  INFO 68940 --- [graphql] [           main] efaultSchemaResourceGraphQlSourceBuilder : Loaded 1 resource(s) in the GraphQL schema.
+2025-07-21T22:32:42.047-07:00 DEBUG 68940 --- [graphql] [           main] efaultSchemaResourceGraphQlSourceBuilder : Loaded GraphQL schema resources: (file [/home/shane/repo/spring_kickstart/springProto/target/classes/graphql/schema.graphqls])
+2025-07-21T22:32:42.050-07:00  INFO 68940 --- [graphql] [           main] o.s.b.a.g.GraphQlAutoConfiguration       : GraphQL schema inspection:
+	Unmapped fields: {}
+	Unmapped registrations: {}
+	Unmapped arguments: {}
+	Skipped types: []
+2025-07-21T22:32:42.050-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'batchLoaderRegistry'
+2025-07-21T22:32:42.050-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'executionGraphQlService' via factory method to bean named 'graphQlSource'
+2025-07-21T22:32:42.050-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'executionGraphQlService' via factory method to bean named 'batchLoaderRegistry'
+2025-07-21T22:32:42.050-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'webGraphQlHandler' via factory method to bean named 'executionGraphQlService'
+2025-07-21T22:32:42.050-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'graphQlHttpHandler' via factory method to bean named 'webGraphQlHandler'
+2025-07-21T22:32:42.051-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'graphQlSseHandler'
+2025-07-21T22:32:42.051-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'graphQlSseHandler' via factory method to bean named 'webGraphQlHandler'
+2025-07-21T22:32:42.051-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'graphQlSseHandler' via factory method to bean named 'spring.graphql-org.springframework.boot.autoconfigure.graphql.GraphQlProperties'
+2025-07-21T22:32:42.051-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'graphQlRouterFunction' via factory method to bean named 'graphQlHttpHandler'
+2025-07-21T22:32:42.051-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'graphQlRouterFunction' via factory method to bean named 'graphQlSseHandler'
+2025-07-21T22:32:42.051-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'graphQlRouterFunction' via factory method to bean named 'spring.graphql-org.springframework.boot.autoconfigure.graphql.GraphQlProperties'
+2025-07-21T22:32:42.051-07:00  INFO 68940 --- [graphql] [           main] .b.a.g.r.GraphQlWebFluxAutoConfiguration : GraphQL endpoint HTTP POST /graphql
+2025-07-21T22:32:42.051-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'resourceHandlerMapping'
+2025-07-21T22:32:42.051-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'resourceUrlProvider'
+2025-07-21T22:32:42.051-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'resourceHandlerMapping' via factory method to bean named 'resourceUrlProvider'
+2025-07-21T22:32:42.052-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'welcomePageRouterFunctionMapping'
+2025-07-21T22:32:42.052-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$WelcomePageConfiguration'
+2025-07-21T22:32:42.052-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageRouterFunctionMapping' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@61d09475'
+2025-07-21T22:32:42.052-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageRouterFunctionMapping' via factory method to bean named 'spring.webflux-org.springframework.boot.autoconfigure.web.reactive.WebFluxProperties'
+2025-07-21T22:32:42.052-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageRouterFunctionMapping' via factory method to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2025-07-21T22:32:42.052-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'requestMappingHandlerAdapter'
+2025-07-21T22:32:42.052-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webFluxAdapterRegistry'
+2025-07-21T22:32:42.052-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'webFluxAdapterRegistry'
+2025-07-21T22:32:42.052-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'serverCodecConfigurer'
+2025-07-21T22:32:42.053-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'webFluxConversionService'
+2025-07-21T22:32:42.053-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'webFluxContentTypeResolver'
+2025-07-21T22:32:42.053-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'webFluxValidator'
+2025-07-21T22:32:42.053-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'handlerFunctionAdapter'
+2025-07-21T22:32:42.053-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'simpleHandlerAdapter'
+2025-07-21T22:32:42.053-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webFluxWebSocketHandlerAdapter'
+2025-07-21T22:32:42.053-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'responseEntityResultHandler'
+2025-07-21T22:32:42.053-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'responseEntityResultHandler' via factory method to bean named 'webFluxAdapterRegistry'
+2025-07-21T22:32:42.053-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'responseEntityResultHandler' via factory method to bean named 'serverCodecConfigurer'
+2025-07-21T22:32:42.053-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'responseEntityResultHandler' via factory method to bean named 'webFluxContentTypeResolver'
+2025-07-21T22:32:42.054-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'responseBodyResultHandler'
+2025-07-21T22:32:42.054-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'responseBodyResultHandler' via factory method to bean named 'webFluxAdapterRegistry'
+2025-07-21T22:32:42.054-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'responseBodyResultHandler' via factory method to bean named 'serverCodecConfigurer'
+2025-07-21T22:32:42.054-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'responseBodyResultHandler' via factory method to bean named 'webFluxContentTypeResolver'
+2025-07-21T22:32:42.054-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'viewResolutionResultHandler'
+2025-07-21T22:32:42.054-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'viewResolutionResultHandler' via factory method to bean named 'webFluxAdapterRegistry'
+2025-07-21T22:32:42.054-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'viewResolutionResultHandler' via factory method to bean named 'webFluxContentTypeResolver'
+2025-07-21T22:32:42.054-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'serverResponseResultHandler'
+2025-07-21T22:32:42.054-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'serverResponseResultHandler' via factory method to bean named 'serverCodecConfigurer'
+2025-07-21T22:32:42.054-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'responseStatusExceptionHandler'
+2025-07-21T22:32:42.054-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration'
+2025-07-21T22:32:42.054-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.HttpHandlerAutoConfiguration$AnnotationConfig'
+2025-07-21T22:32:42.054-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.HttpHandlerAutoConfiguration$AnnotationConfig' via constructor to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@61d09475'
+2025-07-21T22:32:42.054-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'httpHandler'
+2025-07-21T22:32:42.055-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.HttpHandlerAutoConfiguration'
+2025-07-21T22:32:42.055-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration'
+2025-07-21T22:32:42.055-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration'
+2025-07-21T22:32:42.055-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration'
+2025-07-21T22:32:42.055-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'applicationAvailability'
+2025-07-21T22:32:42.055-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration'
+2025-07-21T22:32:42.055-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration'
+2025-07-21T22:32:42.055-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'lifecycleProcessor'
+2025-07-21T22:32:42.055-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties'
+2025-07-21T22:32:42.055-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'lifecycleProcessor' via factory method to bean named 'spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties'
+2025-07-21T22:32:42.056-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.client.reactive.ClientHttpConnectorAutoConfiguration$ReactorNetty'
+2025-07-21T22:32:42.056-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.client.reactive.ClientHttpConnectorAutoConfiguration'
+2025-07-21T22:32:42.056-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.http.reactiveclient-org.springframework.boot.autoconfigure.http.client.reactive.HttpReactiveClientProperties'
+2025-07-21T22:32:42.056-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.http.client.reactive.ClientHttpConnectorAutoConfiguration' via constructor to bean named 'spring.http.reactiveclient-org.springframework.boot.autoconfigure.http.client.reactive.HttpReactiveClientProperties'
+2025-07-21T22:32:42.056-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'clientHttpConnectorBuilder'
+2025-07-21T22:32:42.056-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'reactorNettyHttpClientMapperClientHttpConnectorBuilderCustomizer'
+2025-07-21T22:32:42.056-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.function.client.ClientHttpConnectorAutoConfiguration$ReactorNetty'
+2025-07-21T22:32:42.056-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'reactorNettyHttpClientMapperClientHttpConnectorBuilderCustomizer' via factory method to bean named 'reactorResourceFactory'
+2025-07-21T22:32:42.057-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'clientHttpConnectorSettings'
+2025-07-21T22:32:42.057-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration'
+2025-07-21T22:32:42.057-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties'
+2025-07-21T22:32:42.057-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration' via constructor to bean named 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties'
+2025-07-21T22:32:42.057-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.netty.NettyAutoConfiguration'
+2025-07-21T22:32:42.057-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.netty-org.springframework.boot.autoconfigure.netty.NettyProperties'
+2025-07-21T22:32:42.057-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.netty.NettyAutoConfiguration' via constructor to bean named 'spring.netty-org.springframework.boot.autoconfigure.netty.NettyProperties'
+2025-07-21T22:32:42.057-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.reactor.ReactorAutoConfiguration'
+2025-07-21T22:32:42.057-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.reactor-org.springframework.boot.autoconfigure.reactor.ReactorProperties'
+2025-07-21T22:32:42.057-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.reactor.ReactorAutoConfiguration' via constructor to bean named 'spring.reactor-org.springframework.boot.autoconfigure.reactor.ReactorProperties'
+2025-07-21T22:32:42.058-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration'
+2025-07-21T22:32:42.058-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.sql.init-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties'
+2025-07-21T22:32:42.058-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration'
+2025-07-21T22:32:42.058-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration' via constructor to bean named 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2025-07-21T22:32:42.058-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'simpleAsyncTaskExecutorBuilder'
+2025-07-21T22:32:42.058-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$AsyncConfigurerConfiguration'
+2025-07-21T22:32:42.058-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'applicationTaskExecutorAsyncConfigurer'
+2025-07-21T22:32:42.058-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'applicationTaskExecutorAsyncConfigurer' via factory method to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@6dbb3d7d'
+2025-07-21T22:32:42.058-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$BootstrapExecutorConfiguration'
+2025-07-21T22:32:42.058-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration'
+2025-07-21T22:32:42.058-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$ThreadPoolTaskSchedulerBuilderConfiguration'
+2025-07-21T22:32:42.058-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'threadPoolTaskSchedulerBuilder'
+2025-07-21T22:32:42.058-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
+2025-07-21T22:32:42.059-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'threadPoolTaskSchedulerBuilder' via factory method to bean named 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
+2025-07-21T22:32:42.059-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$SimpleAsyncTaskSchedulerBuilderConfiguration'
+2025-07-21T22:32:42.059-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$SimpleAsyncTaskSchedulerBuilderConfiguration' via constructor to bean named 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
+2025-07-21T22:32:42.059-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'simpleAsyncTaskSchedulerBuilder'
+2025-07-21T22:32:42.059-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration'
+2025-07-21T22:32:42.059-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration'
+2025-07-21T22:32:42.059-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.function.client.ClientHttpConnectorAutoConfiguration'
+2025-07-21T22:32:42.059-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.function.client.WebClientAutoConfiguration$WebClientCodecsConfiguration'
+2025-07-21T22:32:42.059-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'exchangeStrategiesCustomizer'
+2025-07-21T22:32:42.059-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.function.client.WebClientAutoConfiguration'
+2025-07-21T22:32:42.059-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webClientSsl'
+2025-07-21T22:32:42.060-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'webClientSsl' via factory method to bean named 'clientHttpConnectorBuilder'
+2025-07-21T22:32:42.060-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'webClientSsl' via factory method to bean named 'clientHttpConnectorSettings'
+2025-07-21T22:32:42.060-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'webClientSsl' via factory method to bean named 'sslBundleRegistry'
+2025-07-21T22:32:42.060-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.graphql.test.tester.HttpGraphQlTester'
+2025-07-21T22:32:42.060-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.web.client.TestRestTemplate'
+2025-07-21T22:32:42.075-07:00 DEBUG 68940 --- [graphql] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.test.web.reactive.server.WebTestClient'
+2025-07-21T22:32:42.076-07:00 DEBUG 68940 --- [graphql] [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase -2147483647
+2025-07-21T22:32:42.076-07:00 DEBUG 68940 --- [graphql] [           main] o.s.c.support.DefaultLifecycleProcessor  : Successfully started bean 'springBootLoggingLifecycle'
+2025-07-21T22:32:42.076-07:00 DEBUG 68940 --- [graphql] [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2025-07-21T22:32:42.076-07:00 DEBUG 68940 --- [graphql] [           main] o.s.c.support.DefaultLifecycleProcessor  : Successfully started bean 'reactorResourceFactory'
+2025-07-21T22:32:42.076-07:00 DEBUG 68940 --- [graphql] [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 1073741823
+2025-07-21T22:32:42.076-07:00 DEBUG 68940 --- [graphql] [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147481599
+2025-07-21T22:32:42.132-07:00  INFO 68940 --- [graphql] [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 33435 (http)
+2025-07-21T22:32:42.133-07:00 DEBUG 68940 --- [graphql] [           main] o.s.c.support.DefaultLifecycleProcessor  : Successfully started bean 'webServerStartStop'
+2025-07-21T22:32:42.133-07:00 DEBUG 68940 --- [graphql] [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147482623
+2025-07-21T22:32:42.133-07:00 DEBUG 68940 --- [graphql] [           main] o.s.c.support.DefaultLifecycleProcessor  : Successfully started bean 'webServerGracefulShutdown'
+2025-07-21T22:32:42.134-07:00 DEBUG 68940 --- [graphql] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+
+============================
+CONDITIONS EVALUATION REPORT
+============================
+
+
+Positive matches:
+-----------------
+
+   AopAutoConfiguration matched:
+      - @ConditionalOnBooleanProperty (spring.aop.auto=true) matched (OnPropertyCondition)
+
+   AopAutoConfiguration.ClassProxyingConfiguration matched:
+      - @ConditionalOnMissingClass did not find unwanted class 'org.aspectj.weaver.Advice' (OnClassCondition)
+      - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
+
+   ApplicationAvailabilityAutoConfiguration#applicationAvailability matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.availability.ApplicationAvailability; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   org.springframework.boot.autoconfigure.http.client.reactive.ClientHttpConnectorAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.http.client.reactive.ClientHttpConnector', 'reactor.core.publisher.Mono' (OnClassCondition)
+      - Detected ClientHttpConnectorBuilder (ConditionalOnClientHttpConnectorBuilderDetection)
+
+   org.springframework.boot.autoconfigure.web.reactive.function.client.ClientHttpConnectorAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+
+   ClientHttpConnectorAutoConfiguration#clientHttpConnector matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.client.reactive.ClientHttpConnector; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ClientHttpConnectorAutoConfiguration#clientHttpConnectorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.http.client.reactive.ClientHttpConnectorBuilder<?>; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ClientHttpConnectorAutoConfiguration#clientHttpConnectorSettings matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.http.client.reactive.ClientHttpConnectorSettings; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   org.springframework.boot.autoconfigure.http.client.reactive.ClientHttpConnectorAutoConfiguration$ReactorNetty matched:
+      - @ConditionalOnClass found required class 'reactor.netty.http.client.HttpClient' (OnClassCondition)
+
+   org.springframework.boot.autoconfigure.web.reactive.function.client.ClientHttpConnectorAutoConfiguration$ReactorNetty matched:
+      - @ConditionalOnClass found required class 'reactor.netty.http.client.HttpClient' (OnClassCondition)
+
+   CodecsAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.http.codec.CodecConfigurer', 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+
+   CodecsAutoConfiguration.JacksonCodecConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+
+   CodecsAutoConfiguration.JacksonCodecConfiguration#jacksonCodecCustomizer matched:
+      - @ConditionalOnBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) found bean 'jacksonObjectMapper' (OnBeanCondition)
+
+   EmbeddedWebServerFactoryCustomizerAutoConfiguration matched:
+      - @ConditionalOnWebApplication (required) found ConfigurableReactiveWebEnvironment (OnWebApplicationCondition)
+      - @ConditionalOnWarDeployment the application is not deployed as a WAR file. (OnWarDeploymentCondition)
+
+   EmbeddedWebServerFactoryCustomizerAutoConfiguration.NettyWebServerFactoryCustomizerConfiguration matched:
+      - @ConditionalOnClass found required class 'reactor.netty.http.server.HttpServer' (OnClassCondition)
+
+   ErrorWebFluxAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.reactive.config.WebFluxConfigurer' (OnClassCondition)
+      - found ConfigurableReactiveWebEnvironment (OnWebApplicationCondition)
+
+   ErrorWebFluxAutoConfiguration#errorAttributes matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.reactive.error.ErrorAttributes; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ErrorWebFluxAutoConfiguration#errorWebExceptionHandler matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.reactive.error.ErrorWebExceptionHandler; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   GenericCacheConfiguration matched:
+      - Cache org.springframework.boot.autoconfigure.cache.GenericCacheConfiguration automatic cache type (CacheCondition)
+
+   GraphQlAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'graphql.GraphQL', 'org.springframework.graphql.execution.GraphQlSource' (OnClassCondition)
+      - @ConditionalOnGraphQlSchema found schema 'file [/home/shane/repo/spring_kickstart/springProto/target/classes/graphql/schema.graphqls]'; @ConditionalOnGraphQlSchema did not find GraphQlSourceBuilderCustomizer; @ConditionalOnGraphQlSchema did not find GraphQlSource (DefaultGraphQlSchemaCondition)
+
+   GraphQlAutoConfiguration#annotatedControllerConfigurer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.graphql.data.method.annotation.support.AnnotatedControllerConfigurer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   GraphQlAutoConfiguration#batchLoaderRegistry matched:
+      - @ConditionalOnMissingBean (types: org.springframework.graphql.execution.BatchLoaderRegistry; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   GraphQlAutoConfiguration#executionGraphQlService matched:
+      - @ConditionalOnMissingBean (types: org.springframework.graphql.ExecutionGraphQlService; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   GraphQlAutoConfiguration#graphQlSource matched:
+      - @ConditionalOnMissingBean (types: org.springframework.graphql.execution.GraphQlSource; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   GraphQlWebFluxAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'graphql.GraphQL', 'org.springframework.graphql.server.webflux.GraphQlHttpHandler' (OnClassCondition)
+      - found ConfigurableReactiveWebEnvironment (OnWebApplicationCondition)
+      - @ConditionalOnBean (types: org.springframework.graphql.ExecutionGraphQlService; SearchStrategy: all) found bean 'executionGraphQlService' (OnBeanCondition)
+
+   GraphQlWebFluxAutoConfiguration#graphQlHttpHandler matched:
+      - @ConditionalOnMissingBean (types: org.springframework.graphql.server.webflux.GraphQlHttpHandler; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   GraphQlWebFluxAutoConfiguration#graphQlSseHandler matched:
+      - @ConditionalOnMissingBean (types: org.springframework.graphql.server.webflux.GraphQlSseHandler; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   GraphQlWebFluxAutoConfiguration#webGraphQlHandler matched:
+      - @ConditionalOnMissingBean (types: org.springframework.graphql.server.WebGraphQlHandler; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpHandlerAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.web.reactive.DispatcherHandler', 'org.springframework.http.server.reactive.HttpHandler' (OnClassCondition)
+      - found ConfigurableReactiveWebEnvironment (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.http.server.reactive.HttpHandler; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+
+   JacksonAutoConfiguration.Jackson2ObjectMapperBuilderCustomizerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration#jacksonObjectMapperBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.Jackson2ObjectMapperBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration#jacksonObjectMapper matched:
+      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration.ParameterNamesModuleConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.module.paramnames.ParameterNamesModule' (OnClassCondition)
+
+   JacksonAutoConfiguration.ParameterNamesModuleConfiguration#parameterNamesModule matched:
+      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.module.paramnames.ParameterNamesModule; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   LifecycleAutoConfiguration#defaultLifecycleProcessor matched:
+      - @ConditionalOnMissingBean (names: lifecycleProcessor; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   NettyAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'io.netty.util.NettyRuntime' (OnClassCondition)
+
+   NoOpCacheConfiguration matched:
+      - Cache org.springframework.boot.autoconfigure.cache.NoOpCacheConfiguration automatic cache type (CacheCondition)
+
+   PropertyPlaceholderAutoConfiguration#propertySourcesPlaceholderConfigurer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.context.support.PropertySourcesPlaceholderConfigurer; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ReactiveMultipartAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.http.codec.multipart.DefaultPartHttpMessageReader', 'org.springframework.web.reactive.config.WebFluxConfigurer' (OnClassCondition)
+      - found ConfigurableReactiveWebEnvironment (OnWebApplicationCondition)
+
+   ReactiveWebServerFactoryAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.ReactiveHttpInputMessage' (OnClassCondition)
+      - found ConfigurableReactiveWebEnvironment (OnWebApplicationCondition)
+
+   ReactiveWebServerFactoryConfiguration.EmbeddedNetty matched:
+      - @ConditionalOnClass found required class 'reactor.netty.http.server.HttpServer' (OnClassCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.reactive.server.ReactiveWebServerFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ReactorAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'reactor.core.publisher.Hooks' (OnClassCondition)
+
+   ReactorNettyConfigurations.ReactorResourceFactoryConfiguration#reactorResourceFactory matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.client.ReactorResourceFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SimpleCacheConfiguration matched:
+      - Cache org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration automatic cache type (CacheCondition)
+
+   SqlInitializationAutoConfiguration matched:
+      - @ConditionalOnBooleanProperty (spring.sql.init.enabled=true) matched (OnPropertyCondition)
+      - NoneNestedConditions 0 matched 1 did not; NestedCondition on SqlInitializationAutoConfiguration.SqlInitializationModeCondition.ModeIsNever @ConditionalOnProperty (spring.sql.init.mode=never) did not find property 'spring.sql.init.mode' (SqlInitializationAutoConfiguration.SqlInitializationModeCondition)
+
+   SslAutoConfiguration#sslBundleRegistry matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.ssl.SslBundleRegistry,org.springframework.boot.ssl.SslBundles; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutionAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor' (OnClassCondition)
+
+   TaskExecutorConfigurations.AsyncConfigurerConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutorConfigurations.AsyncConfigurerConfiguration#applicationTaskExecutorAsyncConfigurer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration matched:
+      - AnyNestedCondition 1 matched 1 did not; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ModelCondition @ConditionalOnProperty (spring.task.execution.mode=force) did not find property 'spring.task.execution.mode'; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ExecutorBeanCondition @ConditionalOnMissingBean (types: java.util.concurrent.Executor; SearchStrategy: all) did not find any beans (TaskExecutorConfigurations.OnExecutorCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutor matched:
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskExecutorConfigurations.ThreadPoolTaskExecutorBuilderConfiguration#threadPoolTaskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskSchedulingAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler' (OnClassCondition)
+
+   TaskSchedulingConfigurations.SimpleAsyncTaskSchedulerBuilderConfiguration#simpleAsyncTaskSchedulerBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskSchedulingConfigurations.ThreadPoolTaskSchedulerBuilderConfiguration#threadPoolTaskSchedulerBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskSchedulerBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebClientAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+
+   WebClientAutoConfiguration#webClientBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.reactive.function.client.WebClient$Builder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebClientAutoConfiguration#webClientHttpConnectorCustomizer matched:
+      - @ConditionalOnBean (types: org.springframework.http.client.reactive.ClientHttpConnector; SearchStrategy: all) found bean 'clientHttpConnector' (OnBeanCondition)
+
+   WebClientAutoConfiguration#webClientSsl matched:
+      - @ConditionalOnBean (types: org.springframework.boot.ssl.SslBundles; SearchStrategy: all) found bean 'sslBundleRegistry'; @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.reactive.function.client.WebClientSsl; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebClientAutoConfiguration.WebClientCodecsConfiguration matched:
+      - @ConditionalOnBean (types: org.springframework.boot.web.codec.CodecCustomizer; SearchStrategy: all) found beans 'jacksonCodecCustomizer', 'defaultCodecCustomizer', 'defaultPartHttpMessageReaderCustomizer' (OnBeanCondition)
+
+   WebClientAutoConfiguration.WebClientCodecsConfiguration#exchangeStrategiesCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.reactive.function.client.WebClientCodecCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebFluxAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.reactive.config.WebFluxConfigurer' (OnClassCondition)
+      - found ConfigurableReactiveWebEnvironment (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.reactive.config.WebFluxConfigurationSupport; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebFluxAutoConfiguration.EnableWebFluxConfiguration#localeContextResolver matched:
+      - @ConditionalOnMissingBean (names: localeContextResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebFluxAutoConfiguration.EnableWebFluxConfiguration#webSessionManager matched:
+      - @ConditionalOnMissingBean (names: webSessionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebSessionIdResolverAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.web.server.session.WebSessionManager', 'reactor.core.publisher.Mono' (OnClassCondition)
+      - found ConfigurableReactiveWebEnvironment (OnWebApplicationCondition)
+
+   WebSessionIdResolverAutoConfiguration#webSessionIdResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.server.session.WebSessionIdResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   ActiveMQAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.jms.ConnectionFactory' (OnClassCondition)
+
+   AopAutoConfiguration.AspectJAutoProxyingConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.aspectj.weaver.Advice' (OnClassCondition)
+
+   ArtemisAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.jms.ConnectionFactory' (OnClassCondition)
+
+   BatchAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.batch.core.launch.JobLauncher' (OnClassCondition)
+
+   Cache2kCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.cache2k.Cache2kBuilder' (OnClassCondition)
+
+   CacheAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.cache.interceptor.CacheAspectSupport; SearchStrategy: all) did not find any beans of type org.springframework.cache.interceptor.CacheAspectSupport (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.cache.CacheManager' (OnClassCondition)
+
+   CacheAutoConfiguration.CacheManagerEntityManagerFactoryDependsOnPostProcessor:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean' (OnClassCondition)
+         - Ancestor org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration did not match (ConditionEvaluationReport.AncestorsMatchedCondition)
+
+   CaffeineCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.github.benmanes.caffeine.cache.Caffeine' (OnClassCondition)
+
+   CassandraAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondition)
+
+   CassandraDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondition)
+
+   CassandraReactiveDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondition)
+
+   CassandraReactiveRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.cassandra.ReactiveSession' (OnClassCondition)
+
+   CassandraRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondition)
+
+   CouchbaseAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+
+   CouchbaseCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+
+   CouchbaseDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Bucket' (OnClassCondition)
+
+   CouchbaseReactiveDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+
+   CouchbaseReactiveRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+
+   CouchbaseRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Bucket' (OnClassCondition)
+
+   DataSourceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+
+   DataSourceInitializationConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jdbc.datasource.init.DatabasePopulator' (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jdbc.core.JdbcTemplate' (OnClassCondition)
+
+   DispatcherServletAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
+
+   ElasticsearchClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'co.elastic.clients.elasticsearch.ElasticsearchClient' (OnClassCondition)
+
+   ElasticsearchDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.elasticsearch.client.elc.ElasticsearchTemplate' (OnClassCondition)
+
+   ElasticsearchRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.elasticsearch.repository.ElasticsearchRepository' (OnClassCondition)
+
+   ElasticsearchRestClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.elasticsearch.client.RestClientBuilder' (OnClassCondition)
+
+   EmbeddedLdapAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.unboundid.ldap.listener.InMemoryDirectoryServer' (OnClassCondition)
+
+   EmbeddedWebServerFactoryCustomizerAutoConfiguration.JettyWebServerFactoryCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'org.eclipse.jetty.server.Server', 'org.eclipse.jetty.util.Loader', 'org.eclipse.jetty.ee10.webapp.WebAppContext' (OnClassCondition)
+
+   EmbeddedWebServerFactoryCustomizerAutoConfiguration.TomcatWebServerFactoryCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'org.apache.catalina.startup.Tomcat', 'org.apache.coyote.UpgradeProtocol' (OnClassCondition)
+
+   EmbeddedWebServerFactoryCustomizerAutoConfiguration.UndertowWebServerFactoryCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'io.undertow.Undertow', 'org.xnio.SslClientAuthMode' (OnClassCondition)
+
+   ErrorMvcAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.servlet.Servlet' (OnClassCondition)
+
+   FlywayAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.flywaydb.core.Flyway' (OnClassCondition)
+
+   FreeMarkerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'freemarker.template.Configuration' (OnClassCondition)
+
+   GraphQlAutoConfiguration.GraphQlDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.domain.ScrollPosition' (OnClassCondition)
+
+   GraphQlQueryByExampleAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.repository.query.QueryByExampleExecutor' (OnClassCondition)
+
+   GraphQlQuerydslAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.querydsl.core.Query' (OnClassCondition)
+
+   GraphQlRSocketAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.rsocket.core.RSocketServer' (OnClassCondition)
+
+   GraphQlReactiveQueryByExampleAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.repository.query.ReactiveQueryByExampleExecutor' (OnClassCondition)
+
+   GraphQlReactiveQuerydslAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.querydsl.core.Query' (OnClassCondition)
+
+   GraphQlWebFluxAutoConfiguration.WebSocketConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (spring.graphql.websocket.path) did not find property 'spring.graphql.websocket.path' (OnPropertyCondition)
+
+   GraphQlWebFluxSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity' (OnClassCondition)
+
+   GraphQlWebMvcAutoConfiguration:
+      Did not match:
+         - not a servlet web application (OnWebApplicationCondition)
+      Matched:
+         - @ConditionalOnClass found required classes 'graphql.GraphQL', 'org.springframework.graphql.server.webmvc.GraphQlHttpHandler' (OnClassCondition)
+
+   GraphQlWebMvcSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+   GroovyTemplateAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'groovy.text.markup.MarkupTemplateEngine' (OnClassCondition)
+
+   GsonAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
+
+   H2ConsoleAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.h2.server.web.JakartaWebServlet' (OnClassCondition)
+
+   HazelcastAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
+
+   HazelcastCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
+
+   HazelcastJpaDependencyAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
+
+   HibernateJpaAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.persistence.EntityManager' (OnClassCondition)
+
+   HttpClientAutoConfiguration:
+      Did not match:
+         - NoneNestedConditions 1 matched 0 did not; NestedCondition on NotReactiveWebApplicationCondition.ReactiveWebApplication found ConfigurableReactiveWebEnvironment (NotReactiveWebApplicationCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.http.client.ClientHttpRequestFactory' (OnClassCondition)
+
+   HttpEncodingAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.filter.CharacterEncodingFilter' (OnClassCondition)
+
+   HttpMessageConvertersAutoConfiguration:
+      Did not match:
+         - NoneNestedConditions 1 matched 0 did not; NestedCondition on HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition.ReactiveWebApplication found ConfigurableReactiveWebEnvironment (HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.http.converter.HttpMessageConverter' (OnClassCondition)
+
+   HypermediaAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.hateoas.EntityModel' (OnClassCondition)
+
+   InfinispanCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.infinispan.spring.embedded.provider.SpringEmbeddedCacheManager' (OnClassCondition)
+
+   IntegrationAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.integration.config.EnableIntegration' (OnClassCondition)
+
+   JCacheCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.cache.Caching' (OnClassCondition)
+
+   JdbcClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnSingleCandidate did not find required type 'org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate' (OnBeanCondition)
+
+   JdbcRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.jdbc.repository.config.AbstractJdbcConfiguration' (OnClassCondition)
+
+   JdbcTemplateAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jdbc.core.JdbcTemplate' (OnClassCondition)
+
+   JerseyAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.servlet.ServletRegistration' (OnClassCondition)
+
+   JmsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.jms.Message' (OnClassCondition)
+
+   JmxAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.jmx.enabled=true) found different value in property 'spring.jmx.enabled' (OnPropertyCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.jmx.export.MBeanExporter' (OnClassCondition)
+
+   JndiConnectionFactoryAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jms.core.JmsTemplate' (OnClassCondition)
+
+   JndiDataSourceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+
+   JooqAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.jooq.DSLContext' (OnClassCondition)
+
+   JpaRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.jpa.repository.JpaRepository' (OnClassCondition)
+
+   JsonbAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.json.bind.Jsonb' (OnClassCondition)
+
+   JtaAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.transaction.Transaction' (OnClassCondition)
+
+   KafkaAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.kafka.core.KafkaTemplate' (OnClassCondition)
+
+   LdapAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.ldap.core.ContextSource' (OnClassCondition)
+
+   LdapRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.ldap.repository.LdapRepository' (OnClassCondition)
+
+   LiquibaseAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'liquibase.change.DatabaseChange' (OnClassCondition)
+
+   MailSenderAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.mail.internet.MimeMessage' (OnClassCondition)
+
+   MailSenderValidatorAutoConfiguration:
+      Did not match:
+         - @ConditionalOnSingleCandidate did not find required type 'org.springframework.mail.javamail.JavaMailSenderImpl' (OnBeanCondition)
+
+   MessageSourceAutoConfiguration:
+      Did not match:
+         - ResourceBundle did not find bundle with basename messages (MessageSourceAutoConfiguration.ResourceBundleCondition)
+
+   MongoAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
+
+   MongoDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
+
+   MongoReactiveAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCondition)
+
+   MongoReactiveDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCondition)
+
+   MongoReactiveRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCondition)
+
+   MongoRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
+
+   MultipartAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.servlet.MultipartConfigElement' (OnClassCondition)
+
+   MustacheAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.samskivert.mustache.Mustache' (OnClassCondition)
+
+   Neo4jAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+
+   Neo4jDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+
+   Neo4jReactiveDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+
+   Neo4jReactiveRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+
+   Neo4jRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+
+   OAuth2AuthorizationServerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.server.authorization.OAuth2Authorization' (OnClassCondition)
+
+   OAuth2AuthorizationServerJwtAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.nimbusds.jose.jwk.source.JWKSource' (OnClassCondition)
+
+   OAuth2ClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.client.registration.ClientRegistration' (OnClassCondition)
+
+   OAuth2ClientWebSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+   OAuth2ResourceServerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.server.resource.authentication.BearerTokenAuthenticationToken' (OnClassCondition)
+
+   PersistenceExceptionTranslationAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor' (OnClassCondition)
+
+   ProjectInfoAutoConfiguration#buildProperties:
+      Did not match:
+         - @ConditionalOnResource did not find resource '${spring.info.build.location:classpath:META-INF/build-info.properties}' (OnResourceCondition)
+
+   ProjectInfoAutoConfiguration#gitProperties:
+      Did not match:
+         - GitResource did not find git info at classpath:git.properties (ProjectInfoAutoConfiguration.GitResourceAvailableCondition)
+
+   PulsarAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.pulsar.client.api.PulsarClient' (OnClassCondition)
+
+   PulsarReactiveAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.pulsar.client.api.PulsarClient' (OnClassCondition)
+
+   QuartzAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.quartz.Scheduler' (OnClassCondition)
+
+   R2dbcAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.r2dbc.spi.ConnectionFactory' (OnClassCondition)
+
+   R2dbcDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.r2dbc.core.R2dbcEntityTemplate' (OnClassCondition)
+
+   R2dbcInitializationConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'io.r2dbc.spi.ConnectionFactory', 'org.springframework.r2dbc.connection.init.DatabasePopulator' (OnClassCondition)
+
+   R2dbcProxyAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.r2dbc.proxy.ProxyConnectionFactory' (OnClassCondition)
+
+   R2dbcRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.r2dbc.spi.ConnectionFactory' (OnClassCondition)
+
+   R2dbcTransactionManagerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.r2dbc.connection.R2dbcTransactionManager' (OnClassCondition)
+
+   RSocketGraphQlClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.rsocket.RSocket' (OnClassCondition)
+
+   RSocketMessagingAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.rsocket.RSocket' (OnClassCondition)
+
+   RSocketRequesterAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.rsocket.RSocket' (OnClassCondition)
+
+   RSocketSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.rsocket.core.SecuritySocketAcceptorInterceptor' (OnClassCondition)
+
+   RSocketServerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.rsocket.core.RSocketServer' (OnClassCondition)
+
+   RSocketStrategiesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.rsocket.RSocket' (OnClassCondition)
+
+   RabbitAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.rabbitmq.client.Channel' (OnClassCondition)
+
+   ReactiveElasticsearchClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'co.elastic.clients.transport.ElasticsearchTransport' (OnClassCondition)
+
+   ReactiveElasticsearchRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchClient' (OnClassCondition)
+
+   ReactiveOAuth2ClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.client.registration.ClientRegistration' (OnClassCondition)
+
+   ReactiveOAuth2ClientWebSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity' (OnClassCondition)
+
+   ReactiveOAuth2ResourceServerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity' (OnClassCondition)
+
+   ReactiveSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity' (OnClassCondition)
+
+   ReactiveUserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.ReactiveAuthenticationManager' (OnClassCondition)
+
+   ReactiveWebServerFactoryAutoConfiguration#forwardedHeaderTransformer:
+      Did not match:
+         - @ConditionalOnProperty (server.forward-headers-strategy=framework) did not find property 'server.forward-headers-strategy' (OnPropertyCondition)
+
+   ReactiveWebServerFactoryAutoConfiguration#tomcatReactiveWebServerFactoryCustomizer:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.catalina.startup.Tomcat' (OnClassCondition)
+
+   ReactiveWebServerFactoryConfiguration.EmbeddedJetty:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'org.eclipse.jetty.server.Server', 'org.eclipse.jetty.ee10.servlet.ServletHolder' (OnClassCondition)
+
+   ReactiveWebServerFactoryConfiguration.EmbeddedTomcat:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.catalina.startup.Tomcat' (OnClassCondition)
+
+   ReactiveWebServerFactoryConfiguration.EmbeddedUndertow:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.undertow.Undertow' (OnClassCondition)
+
+   RedisAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.core.RedisOperations' (OnClassCondition)
+
+   RedisCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.connection.RedisConnectionFactory' (OnClassCondition)
+
+   RedisReactiveAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.connection.ReactiveRedisConnectionFactory' (OnClassCondition)
+
+   RedisRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.repository.configuration.EnableRedisRepositories' (OnClassCondition)
+
+   RepositoryRestMvcAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration' (OnClassCondition)
+
+   RestClientAutoConfiguration:
+      Did not match:
+         - AnyNestedCondition 0 matched 2 did not; NestedCondition on NotReactiveWebApplicationOrVirtualThreadsExecutorEnabledCondition.VirtualThreadsExecutorEnabled found non-matching nested conditions @ConditionalOnThreading did not find VIRTUAL; NestedCondition on NotReactiveWebApplicationOrVirtualThreadsExecutorEnabledCondition.NotReactiveWebApplication NoneNestedConditions 1 matched 0 did not; NestedCondition on NotReactiveWebApplicationCondition.ReactiveWebApplication found ConfigurableReactiveWebEnvironment (NotReactiveWebApplicationOrVirtualThreadsExecutorEnabledCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.web.client.RestClient' (OnClassCondition)
+
+   RestTemplateAutoConfiguration:
+      Did not match:
+         - NoneNestedConditions 1 matched 0 did not; NestedCondition on NotReactiveWebApplicationCondition.ReactiveWebApplication found ConfigurableReactiveWebEnvironment (NotReactiveWebApplicationCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.web.client.RestTemplate' (OnClassCondition)
+
+   Saml2RelyingPartyAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (OnClassCondition)
+
+   SecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.DefaultAuthenticationEventPublisher' (OnClassCondition)
+
+   SecurityFilterAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.config.http.SessionCreationPolicy' (OnClassCondition)
+
+   SendGridAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.sendgrid.SendGrid' (OnClassCondition)
+
+   ServletWebServerFactoryAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.servlet.ServletRequest' (OnClassCondition)
+
+   SessionAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.session.Session' (OnClassCondition)
+
+   SpringApplicationAdminJmxAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.application.admin.enabled=true) did not find property 'spring.application.admin.enabled' (OnPropertyCondition)
+
+   SpringDataWebAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.web.PageableHandlerMethodArgumentResolver' (OnClassCondition)
+
+   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilderVirtualThreads:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder' simpleAsyncTaskExecutorBuilder (OnBeanCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutorVirtualThreads:
+      Did not match:
+         - @ConditionalOnThreading did not find VIRTUAL (OnThreadingCondition)
+
+   TaskSchedulingAutoConfiguration#scheduledBeanLazyInitializationExcludeFilter:
+      Did not match:
+         - @ConditionalOnBean (names: org.springframework.context.annotation.internalScheduledAnnotationProcessor; SearchStrategy: all) did not find any beans named org.springframework.context.annotation.internalScheduledAnnotationProcessor (OnBeanCondition)
+
+   TaskSchedulingConfigurations.SimpleAsyncTaskSchedulerBuilderConfiguration#simpleAsyncTaskSchedulerBuilderVirtualThreads:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder; SearchStrategy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder' simpleAsyncTaskSchedulerBuilder (OnBeanCondition)
+
+   TaskSchedulingConfigurations.TaskSchedulerConfiguration:
+      Did not match:
+         - @ConditionalOnBean (names: org.springframework.context.annotation.internalScheduledAnnotationProcessor; SearchStrategy: all) did not find any beans named org.springframework.context.annotation.internalScheduledAnnotationProcessor (OnBeanCondition)
+
+   ThymeleafAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.thymeleaf.spring6.SpringTemplateEngine' (OnClassCondition)
+
+   TransactionAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassCondition)
+
+   TransactionManagerCustomizationAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+
+   ValidationAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.validation.executable.ExecutableValidator' (OnClassCondition)
+
+   WebFluxAutoConfiguration#hiddenHttpMethodFilter:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.webflux.hiddenmethod.filter.enabled=true) did not find property 'spring.webflux.hiddenmethod.filter.enabled' (OnPropertyCondition)
+
+   WebFluxAutoConfiguration.ProblemDetailsErrorHandlingConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.webflux.problemdetails.enabled=true) did not find property 'spring.webflux.problemdetails.enabled' (OnPropertyCondition)
+
+   WebFluxAutoConfiguration.ResourceChainCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnEnabledResourceChain did not find class org.webjars.WebJarVersionLocator (OnEnabledResourceChainCondition)
+
+   WebMvcAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.servlet.Servlet' (OnClassCondition)
+
+   WebServiceTemplateAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.oxm.Marshaller' (OnClassCondition)
+
+   WebServicesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.ws.transport.http.MessageDispatcherServlet' (OnClassCondition)
+
+   WebSocketMessagingAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer' (OnClassCondition)
+
+   WebSocketReactiveAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.servlet.Servlet' (OnClassCondition)
+
+   WebSocketServletAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.servlet.Servlet' (OnClassCondition)
+
+   XADataSourceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.transaction.TransactionManager' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+
+    org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration
+
+    org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
+
+    org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
+
+    org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
+
+    org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+
+
+
+2025-07-21T22:32:42.135-07:00  INFO 68940 --- [graphql] [           main] org.example.GroupFeedIntegrationTest     : Started GroupFeedIntegrationTest in 0.196 seconds (process running for 1.48)
+2025-07-21T22:32:42.288-07:00 DEBUG 68940 --- [graphql] [ux-http-epoll-2] o.s.g.server.webflux.GraphQlHttpHandler  : Executing: document='query {
+  groupFeed(groupId: "abc") {
+    threads { id title pinned }
+    pinnedThreads { id title pinned }
+  }
+}
+', id=ce958ecc-1, Locale=en_US
+2025-07-21T22:32:42.312-07:00 ERROR 68940 --- [graphql] [ux-http-epoll-2] s.g.e.ExceptionResolversExceptionHandler : Unresolved IllegalArgumentException for executionId ce958ecc-1
+
+java.lang.IllegalArgumentException: Cannot resolve DataLoader for parameter 'groupFeedLoader' in method public java.util.concurrent.CompletableFuture<com.graph.graphqlexample.graphql.model.GroupFeed> com.graph.graphqlexample.graphql.GroupFeedResolver.groupFeed(java.lang.String,org.dataloader.DataLoader<com.graph.graphqlexample.graphql.dataloader.HydrantGroupFeedDataLoaderKey, com.graph.graphqlexample.graphql.model.HydratedGroupFeedResponse>). Neither the name of the declared value type 'class com.graph.graphqlexample.graphql.model.HydratedGroupFeedResponse' nor the method parameter name 'groupFeedLoader' match to any DataLoader. The DataLoaderRegistry contains: []
+	at org.springframework.graphql.data.method.annotation.support.DataLoaderMethodArgumentResolver.resolveArgument(DataLoaderMethodArgumentResolver.java:70) ~[spring-graphql-1.4.0.jar:1.4.0]
+	at org.springframework.graphql.data.method.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:83) ~[spring-graphql-1.4.0.jar:1.4.0]
+	at org.springframework.graphql.data.method.annotation.support.DataFetcherHandlerMethodSupport.getMethodArgumentValues(DataFetcherHandlerMethodSupport.java:92) ~[spring-graphql-1.4.0.jar:1.4.0]
+	at org.springframework.graphql.data.method.annotation.support.DataFetcherHandlerMethod.invoke(DataFetcherHandlerMethod.java:118) ~[spring-graphql-1.4.0.jar:1.4.0]
+	at org.springframework.graphql.data.method.annotation.support.DataFetcherHandlerMethod.invoke(DataFetcherHandlerMethod.java:103) ~[spring-graphql-1.4.0.jar:1.4.0]
+	at org.springframework.graphql.data.method.annotation.support.AnnotatedControllerConfigurer$SchemaMappingDataFetcher.get(AnnotatedControllerConfigurer.java:521) ~[spring-graphql-1.4.0.jar:1.4.0]
+	at org.springframework.graphql.execution.ContextDataFetcherDecorator.lambda$get$0(ContextDataFetcherDecorator.java:92) ~[spring-graphql-1.4.0.jar:1.4.0]
+	at io.micrometer.context.ContextSnapshot.lambda$wrap$1(ContextSnapshot.java:106) ~[context-propagation-1.1.3.jar:1.1.3]
+	at org.springframework.graphql.execution.ContextDataFetcherDecorator.get(ContextDataFetcherDecorator.java:92) ~[spring-graphql-1.4.0.jar:1.4.0]
+	at graphql.execution.ExecutionStrategy.invokeDataFetcher(ExecutionStrategy.java:510) ~[graphql-java-24.0.jar:na]
+	at graphql.execution.ExecutionStrategy.fetchField(ExecutionStrategy.java:464) ~[graphql-java-24.0.jar:na]
+	at graphql.execution.ExecutionStrategy.fetchField(ExecutionStrategy.java:404) ~[graphql-java-24.0.jar:na]
+	at graphql.execution.ExecutionStrategy.resolveFieldWithInfo(ExecutionStrategy.java:363) ~[graphql-java-24.0.jar:na]
+	at graphql.execution.ExecutionStrategy.getAsyncFieldValueInfo(ExecutionStrategy.java:328) ~[graphql-java-24.0.jar:na]
+	at graphql.execution.AsyncExecutionStrategy.execute(AsyncExecutionStrategy.java:57) ~[graphql-java-24.0.jar:na]
+	at graphql.execution.Execution.executeOperation(Execution.java:205) ~[graphql-java-24.0.jar:na]
+	at graphql.execution.Execution.execute(Execution.java:124) ~[graphql-java-24.0.jar:na]
+	at graphql.GraphQL.execute(GraphQL.java:549) ~[graphql-java-24.0.jar:na]
+	at graphql.GraphQL.lambda$parseValidateAndExecute$13(GraphQL.java:479) ~[graphql-java-24.0.jar:na]
+	at java.base/java.util.concurrent.CompletableFuture.uniComposeStage(CompletableFuture.java:1187) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.thenCompose(CompletableFuture.java:2341) ~[na:na]
+	at graphql.EngineRunningState.compose(EngineRunningState.java:87) ~[graphql-java-24.0.jar:na]
+	at graphql.GraphQL.parseValidateAndExecute(GraphQL.java:474) ~[graphql-java-24.0.jar:na]
+	at graphql.GraphQL.lambda$executeAsync$9(GraphQL.java:434) ~[graphql-java-24.0.jar:na]
+	at java.base/java.util.concurrent.CompletableFuture.uniComposeStage(CompletableFuture.java:1187) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.thenCompose(CompletableFuture.java:2341) ~[na:na]
+	at graphql.EngineRunningState.compose(EngineRunningState.java:87) ~[graphql-java-24.0.jar:na]
+	at graphql.GraphQL.lambda$executeAsync$10(GraphQL.java:423) ~[graphql-java-24.0.jar:na]
+	at graphql.EngineRunningState.call(EngineRunningState.java:198) ~[graphql-java-24.0.jar:na]
+	at graphql.GraphQL.executeAsync(GraphQL.java:416) ~[graphql-java-24.0.jar:na]
+	at org.springframework.graphql.execution.DefaultExecutionGraphQlService.lambda$execute$4(DefaultExecutionGraphQlService.java:98) ~[spring-graphql-1.4.0.jar:1.4.0]
+	at reactor.core.publisher.MonoDeferContextual.subscribe(MonoDeferContextual.java:47) ~[reactor-core-3.7.7.jar:3.7.7]
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.7.7.jar:3.7.7]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165) ~[reactor-core-3.7.7.jar:3.7.7]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.7.7.jar:3.7.7]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.7.7.jar:3.7.7]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.7.7.jar:3.7.7]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:158) ~[reactor-core-3.7.7.jar:3.7.7]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.7.7.jar:3.7.7]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) ~[reactor-core-3.7.7.jar:3.7.7]
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) ~[reactor-core-3.7.7.jar:3.7.7]
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2096) ~[reactor-core-3.7.7.jar:3.7.7]
+	at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) ~[reactor-core-3.7.7.jar:3.7.7]
+	at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.7.7.jar:3.7.7]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) ~[reactor-core-3.7.7.jar:3.7.7]
+	at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.7.7.jar:3.7.7]
+	at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:413) ~[reactor-netty-core-1.2.7.jar:1.2.7]
+	at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:455) ~[reactor-netty-core-1.2.7.jar:1.2.7]
+	at reactor.netty.http.server.HttpServerOperations.handleLastHttpContent(HttpServerOperations.java:897) ~[reactor-netty-http-1.2.7.jar:1.2.7]
+	at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:806) ~[reactor-netty-http-1.2.7.jar:1.2.7]
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) ~[reactor-netty-core-1.2.7.jar:1.2.7]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.122.Final.jar:4.1.122.Final]
+	at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:321) ~[reactor-netty-http-1.2.7.jar:1.2.7]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) ~[netty-codec-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) ~[netty-transport-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) ~[netty-transport-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799) ~[netty-transport-classes-epoll-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) ~[netty-transport-classes-epoll-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) ~[netty-transport-classes-epoll-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998) ~[netty-common-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.122.Final.jar:4.1.122.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.122.Final.jar:4.1.122.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-07-21T22:32:42.318-07:00 DEBUG 68940 --- [graphql] [ux-http-epoll-2] o.s.g.server.webflux.GraphQlHttpHandler  : Execution result has errors: [INTERNAL_ERROR for ce958ecc-1].
+]]></system-out>
+  </testcase>
+</testsuite>

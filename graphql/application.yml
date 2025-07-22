@@ -1,0 +1,23 @@
+server:
+  port: 8080
+logging:
+  level:
+    root: INFO # Or DEBUG if you want more verbose Spring Boot internal logs
+    org.springframework.boot.autoconfigure: DEBUG # <--- Keep this at DEBUG
+    org.springframework.context: DEBUG # <--- Keep this at DEBUG
+    org.springframework.beans: DEBUG # <--- Keep this at DEBUG
+    com.example.demo: DEBUG # <--- Replace with your project's base package
+    org.springframework.graphql: DEBUG
+    org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger: DEBUG
+
+spring:
+  graphql:
+    path: /graphql
+    schema:
+      locations: classpath:graphql/
+      printer:
+        enabled: true
+  main:
+    log-startup-info: true
+  webflux: # Ensure this isn't conflicting somehow
+    hiddenmethod.filter.enabled: false # Example, if you see related errors

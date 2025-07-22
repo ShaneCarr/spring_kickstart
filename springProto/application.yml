@@ -1,0 +1,21 @@
+server:
+  port: 8080
+logging:
+  level:
+    org.springframework.boot.autoconfigure: DEBUG # <--- CHANGE THIS TO DEBUG
+    org.springframework.context: DEBUG # <--- CONSIDER CHANGING THIS TOO for more context
+    org.springframework.beans: DEBUG # <--- AND THIS
+    org.example: DEBUG
+    org.springframework.graphql: DEBUG
+    # Remove or set to DEBUG if you want to see the full report
+    org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger: DEBUG
+
+spring:
+  graphql:
+    path: /graphql
+    schema:
+      locations: classpath:graphql/
+      printer:
+        enabled: true
+  main:
+    log-startup-info: true

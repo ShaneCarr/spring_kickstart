@@ -6,31 +6,21 @@ import org.example.model.HydratedGroupFeedResponse;
 import org.example.service.MockHydrantClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
+import reactor.core.publisher.Flux;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
-
 @Component
-public class HydrantGroupFeedDataLoader
-        implements BatchLoaderWithContext<HydrantGroupFeedDataLoaderKey, HydratedGroupFeedResponse> {
-
+public class HydrantGroupFeedDataLoader{
   private final MockHydrantClient mockHydrantClient;
 
   public HydrantGroupFeedDataLoader(MockHydrantClient mockHydrantClient) {
     this.mockHydrantClient = mockHydrantClient;
   }
 
-  @Override
-  public CompletionStage<List<HydratedGroupFeedResponse>> load(
-          List<HydrantGroupFeedDataLoaderKey> keys,
-          BatchLoaderEnvironment environment) {
-
-    // You can extract context here later if needed
-    // Object context = environment.getContext();
-
-    return CompletableFuture.supplyAsync(() ->
-            mockHydrantClient.fetchGroupFeeds(keys)
-    );
+  public Flux<HydratedGroupFeedResponse> load(List<HydrantGroupFeedDataLoaderKey> keys,
+                                              BatchLoaderEnvironment env) {
+    return Flux.fromIterable(mockHydrantClient.fetchGroupFeeds(keys));
   }
 }

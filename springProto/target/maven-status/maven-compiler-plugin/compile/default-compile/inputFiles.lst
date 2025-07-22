@@ -1,0 +1,13 @@
+/home/shane/repo/spring_kickstart/springProto/src/main/java/com/graph/graphqlexample/graphql/GraphqlApplication.java
+/home/shane/repo/spring_kickstart/springProto/src/main/java/com/graph/graphqlexample/graphql/GroupFeedResolver.java
+/home/shane/repo/spring_kickstart/springProto/src/main/java/com/graph/graphqlexample/graphql/dataloader/DataLoaderConfig.java
+/home/shane/repo/spring_kickstart/springProto/src/main/java/com/graph/graphqlexample/graphql/dataloader/HydrantGroupFeedBatchLoader.java
+/home/shane/repo/spring_kickstart/springProto/src/main/java/com/graph/graphqlexample/graphql/dataloader/HydrantGroupFeedDataLoader.java
+/home/shane/repo/spring_kickstart/springProto/src/main/java/com/graph/graphqlexample/graphql/dataloader/HydrantGroupFeedDataLoaderKey.java
+/home/shane/repo/spring_kickstart/springProto/src/main/java/com/graph/graphqlexample/graphql/model/GroupFeed.java
+/home/shane/repo/spring_kickstart/springProto/src/main/java/com/graph/graphqlexample/graphql/model/GroupFeedThreadConnection.java
+/home/shane/repo/spring_kickstart/springProto/src/main/java/com/graph/graphqlexample/graphql/model/HydratedGroupFeedResponse.java
+/home/shane/repo/spring_kickstart/springProto/src/main/java/com/graph/graphqlexample/graphql/model/Thread.java
+/home/shane/repo/spring_kickstart/springProto/src/main/java/com/graph/graphqlexample/graphql/model/options/HydrantOptions.java
+/home/shane/repo/spring_kickstart/springProto/src/main/java/com/graph/graphqlexample/graphql/service/HydrantClient.java
+/home/shane/repo/spring_kickstart/springProto/src/main/java/com/graph/graphqlexample/graphql/service/MockHydrantClient.java
