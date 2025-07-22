@@ -1,9 +1,20 @@
 server:
   port: 8080
+logging:
+  level:
+    org.springframework.boot.autoconfigure: ERROR
+    org.springframework.context: WARN
+    org.springframework.beans: WARN
+    org.example: DEBUG
+    org.springframework.graphql: DEBUG
+    org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger: WARN
 
-graphql:
-  servlet:
-    mapping: /graphql
-    enabled: true
-  tools:
-    schema-location-pattern: "**/*.graphqls"
+spring:
+  graphql:
+    path: /graphql
+    schema:
+      locations: classpath:graphql/
+      printer:
+        enabled: true
+  main:
+    log-startup-info: true

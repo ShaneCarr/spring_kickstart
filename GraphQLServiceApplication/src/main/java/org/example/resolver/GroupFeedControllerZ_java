@@ -1,0 +1,27 @@
+//package org.example.resolver;
+//
+//import org.example.model.GroupFeed;
+//import org.example.model.Thread;
+//import org.springframework.graphql.data.method.annotation.Argument;
+//import org.springframework.graphql.data.method.annotation.QueryMapping;
+//import org.springframework.stereotype.Controller;
+//
+//import java.util.List;
+//
+//@Controller
+//public class GroupFeedController {
+//
+//  @QueryMapping
+//  public GroupFeed groupFeed(@Argument String groupId) {
+//    List<Thread> threads = List.of(
+//            new Thread("t1", "Thread 1", false),
+//            new Thread("t2", "Thread 2", false)
+//    );
+//
+//    List<Thread> pinned = List.of(
+//            new Thread("p1", "Pinned 1", true)
+//    );
+//
+//    return new GroupFeed(threads, pinned);
+//  }
+//}

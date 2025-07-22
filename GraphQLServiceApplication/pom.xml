@@ -7,65 +7,57 @@
   <groupId>org.example</groupId>
   <artifactId>GraphQLServiceApplication</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
-
-  <name>GraphQLServiceApplication</name>
-  <url>http://maven.apache.org</url>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>21</java.version>
-
-    <!-- Dependency Versions -->
-    <spring-boot.version>2.7.18</spring-boot.version>
-    <graphql-java.version>17.3</graphql-java.version>
-    <graphql-java-tools.version>11.1.0</graphql-java-tools.version>
-    <graphql-spring-boot.version>11.1.0</graphql-spring-boot.version>
-    <graphiql.version>11.1.0</graphiql.version>
-    <dataloader.version>5.0.1</dataloader.version>
-    <junit.jupiter.version>5.10.2</junit.jupiter.version>
-
-    <!-- Plugin Versions -->
-    <compiler-plugin.version>3.13.0</compiler-plugin.version>
-    <spring-boot-maven-plugin.version>2.7.18</spring-boot-maven-plugin.version>
+    <spring-boot.version>3.5.3</spring-boot.version>
+    <graphql-java-dataloader.version>3.5.3</graphql-java-dataloader.version>
+    <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
   </properties>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
   <dependencies>
+    <!-- Spring Boot + GraphQL -->
     <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter</artifactId>
-      <version>${junit.jupiter.version}</version>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-graphql</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <!-- GraphQL Java DataLoader -->
+<!--    <dependency>-->
+<!--      <groupId>com.graphql-java</groupId>-->
+<!--      <artifactId>java-dataloader</artifactId>-->
+<!--      <version>3.3.0</version>  &lt;!&ndash; Use existing version, not 3.5.3 &ndash;&gt;-->
+<!--    </dependency>-->
+
+
+    <!-- Testing -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
 
     <dependency>
-      <groupId>com.graphql-java-kickstart</groupId>
-      <artifactId>graphql-spring-boot-starter</artifactId>
-      <version>${graphql-spring-boot.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.graphql-java-kickstart</groupId>
-      <artifactId>graphql-java-tools</artifactId>
-      <version>${graphql-java-tools.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.graphql-java</groupId>
-      <artifactId>graphql-java</artifactId>
-      <version>${graphql-java.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.graphql-java-kickstart</groupId>
-      <artifactId>graphiql-spring-boot-starter</artifactId>
-      <version>${graphiql.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.graphql-java</groupId>
-      <artifactId>java-dataloader</artifactId>
-      <version>${dataloader.version}</version>
+      <groupId>org.springframework.graphql</groupId>
+      <artifactId>spring-graphql-test</artifactId>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
@@ -73,29 +65,37 @@
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>${compiler-plugin.version}</version>
+        <artifactId>maven-surefire-plugin</artifactId>
+
+        <version>3.2.5</version>
         <configuration>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
-          <compilerArgs>
-            <arg>-parameters</arg>
-          </compilerArgs>
+
+          <printSummary>true</printSummary>
+          <!-- Redirect test output to file makes it hard to debug changes.-->
+          <redirectTestOutputToFile>false</redirectTestOutputToFile>
+          <trimStackTrace>false</trimStackTrace>
+          <forkCount>1</forkCount>
+          <reuseForks>true</reuseForks>
         </configuration>
       </plugin>
 
+      <!-- Java Compilation -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.2.5</version>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven-compiler-plugin.version}</version>
+        <configuration>
+          <parameters>true</parameters>
+          <release>${java.version}</release>
+        </configuration>
       </plugin>
 
+      <!-- Spring Boot Plugin -->
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>${spring-boot-maven-plugin.version}</version>
+        <version>${spring-boot.version}</version>
       </plugin>
     </plugins>
   </build>
-
 </project>
